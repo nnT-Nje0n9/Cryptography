@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Base64 Decoder, Encoder</title>
+    <meta charset="UTF-8">
+        <style>
+            #txtbox{
+                
+                width: 700px;
+                height: 300px;
+                display: block;
+                margin: 0 auto;
+                text-align: justify;
+            }
+            .decode{
+                position: absolute;
+                width: 100px;
+                height: 33px;
+                background: #999999;
+                display: block;
+                margin: 5px 0 0 0;
+                left: 58%;
+            }
+            .encode{
+                position: absolute;
+                width: 100px;
+                height: 33px;
+                background: #999999;
+                display: block;
+                margin: 5px 0 0 0;
+                left: 64.2%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">Base 64 Decoder, Encoder</h1>
+        <p style="text-align: center">input your code</p>
+        <!--<input class="txtbox" type="text" value="">-->
+        <textarea id="txtbox"></textarea>
+        <script>
+            var code = document.getElementById('txtbox');
+            code.value = 'Made by nnT_Nje0n9';
+        </script>
+        <input class="decode" type="button" value="Decode" onclick="
+            code.value = atob(code.value);
+        ">
+        <input class="encode" type="button" value="Encode" onclick="
+            code.value = btoa(code.value);      
+        ">
+    </body>
+</html>
