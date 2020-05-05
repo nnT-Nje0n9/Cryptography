@@ -11,11 +11,11 @@ for i in alphabet:
     dic[i] = cipher.count(i)
     print(i, " : ", cipher.count(i))
 
-for i in list(dic.keys()):
+for i in list(dic.keys()): #delete the element has 0 value
     if dic[i] == 0:
         del dic[i]
 
-dic = dict(sorted(dic.items(), key=lambda x:x[1], reverse=False))
+dic = dict(sorted(dic.items(), key=lambda x:x[1], reverse=False)) #sort
 
 x = list(dic.keys())
 y = list(dic.values())
